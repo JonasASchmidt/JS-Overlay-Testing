@@ -36,11 +36,26 @@
 
     <!-- Add your site or application content here -->
     
+    <img src="http://farm4.static.flickr.com/3651/3445879840_7ca4b491e9_m.jpg" rel="#mies1"/>
     
-    
-    
-    
+    <!-- first overlay. id attribute matches our selector -->
+	<div class="simple_overlay" id="mies1">
+		<!-- iFrame -->
+		<iframe class="calculator_iframe" frameborder="0" scrolling="yes" src=""></iframe>
+	
+	  <!-- large image -->
+	  <img src="photos/barcelona-pavilion-large.jpg" />
+	 
+	  <!-- image details -->
+	  <div class="details">
+	    <h3>The Barcelona Pavilion</h3>
+	    <h4>Barcelona, Spain</h4>
+	    <p>The content ...</p>
+	  </div>
+	</div>
+ 
     <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
+	
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -50,6 +65,7 @@
     <!-- scripts concatenated and minified via build script -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>$("img[rel]").overlay();</script>
     <!-- end scripts -->
 </body>
 </html>
