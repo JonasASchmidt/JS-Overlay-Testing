@@ -439,58 +439,54 @@ td {
    Author: Jonas A. Schmidt - jonas@schoenermedien.de
    ========================================================================== */
 
-/* the overlayed element */
+/* the outer part of the overlayed element a.k.a downlighting-shape*/
 .simple_overlay {
- 
-    /* must be initially hidden */
+	
+	/* must be initially hidden */
     display:none;
- 
+    
     /* place overlay on top of other elements */
     z-index:10000;
- 
+	/*
+	position:fixed;
+	*/
+	top:0;
+	left:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	/*background-color:#000000;*/
+	background: rgba(0,0,0,0.8);
+}
+
+img#site_content {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	cursor:pointer;
+}
+
+.calculator_iframe {
+
+	/* positioning */
+	/*position:relative;*/
+	display:block;
+	/*
+	margin-top:10%;
+	margin-bottom:10%;
+	*/
+	margin-right:auto;
+	margin-left:auto;
+	
     /* styling */
-    background-color:#333;
- 
-    width:675px;
-    min-height:200px;
-    border:1px solid #666;
- 
-    /* CSS3 styling for latest browsers */
-    -moz-box-shadow:0 0 90px 5px #000;
-    -webkit-box-shadow: 0 0 90px #000;
+    background-color:#FFFFFF;
+    width:60%;
+    min-height:80%;
+    height:80%;
+    margin-top:5%;
+	margin-bottom:5%;
+    border:4px solid #DDDDDD;
 }
- 
-/* close button positioned on upper right corner */
-.simple_overlay .close {
-    background-image:url(http://jquerytools.org/media/img/overlay/close.png);
-    position:absolute;
-    right:-15px;
-    top:-15px;
-    cursor:pointer;
-    height:35px;
-    width:35px;
-}
-
-
- /* styling for elements inside overlay */
-  .details {
-  position:absolute;
-  top:15px;
-  right:15px;
-  font-size:11px;
-  color:#fff;
-  width:150px;
-  }
- 
-  .details h3 {
-  color:#aba;
-  font-size:15px;
-  }
-
-
-
-
-
 
 
 
@@ -505,7 +501,6 @@ td {
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-
 
 
 /* ==|== non-semantic helper classes ========================================
