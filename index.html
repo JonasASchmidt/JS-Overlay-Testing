@@ -42,19 +42,26 @@
 	<div class="simple_overlay" id="mies1">
 			<!-- iFrame -->
 			<iframe class="calculator_iframe" frameborder="0" src="iframe-content_01.html"></iframe>
+			
 	</div>
     <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 	
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="js/vendor/jquery-1.7.2.min.js"></script>
+	<!-- 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+   	-->
+	<script src="js/vendor/jquery.tools.min.js"></script>
+	<!-- 
 	<script src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery.tools.min.js"><\/script>')</script>
+	-->
     <!-- scripts concatenated and minified via build script -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script>$("img[rel]").overlay();</script>
+    <script>$("img[rel]").overlay({top: 0});</script>
     <!-- end scripts -->
 </body>
 </html>
